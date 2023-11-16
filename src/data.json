@@ -1,0 +1,84 @@
+{
+  "playlists": [
+    {
+      "name": "relax",
+      "tracks": [
+        {
+          "name": "Forest Lullaby",
+          "url": "forest-lullaby.mp3",
+          "author": "Lesfm"
+        },
+        {
+          "name": "Morning Garden - Acoustic Chill",
+          "url": "morning-garden-acoustic-chill.mp3",
+          "author": "Olexy"
+        },
+        {
+          "name": "Sedative",
+          "url": "sedative.mp3",
+          "author": "Lesfm"
+        },
+        {
+          "name": "Once In Paris",
+          "url": "once-in-paris.mp3",
+          "author": "Pumpupthemind"
+        },
+        {
+          "name": "Just Relax",
+          "url": "just-relax.mp3",
+          "author": "Lesfm"
+        },
+        {
+          "name": "Mindfulness Relaxation & Meditation Music",
+          "url": "mindfulness-relaxation-amp-meditation-music.mp3",
+          "author": "John Kensy Music"
+        },
+        {
+          "name": "Ambient Piano 1/14",
+          "url": "ambient-piano-114.mp3",
+          "author": "BlackPyBeats"
+        }
+      ]
+    },
+    {
+      "name": "epic",
+      "tracks": [
+        {
+          "name": "Adventures of the Fellowship",
+          "url": "adventures-of-the-fellowship.mp3",
+          "author": "17406877"
+        },
+        {
+          "name": "BLINDED BY THE LIGHT",
+          "url": "blinded-by-the-light.mp3",
+          "author": "KELLEPICS"
+        },
+        {
+          "name": "Wall Pass",
+          "url": "wall-pass.mp3",
+          "author": "PabloGaez"
+        },
+        {
+          "name": "Whispers Of Love (Piano)",
+          "url": "whispers-of-love-piano.mp3",
+          "author": "PineAppleMusic"
+        },
+        {
+          "name": "A Pirate's Life",
+          "url": "a-pirate39s-life.mp3",
+          "author": "17406877"
+        },
+        {
+          "name": "Drive Breakbeat",
+          "url": "drive-breakbeat.mp3",
+          "author": "Rockot"
+        },
+        {
+          "name": "The Blackest Bouquet",
+          "url": "leonell-cassio-the-blackest-bouquet.mp3",
+          "author": "LeonellCassio"
+        }
+      ]
+    }
+  ]
+}
