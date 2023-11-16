@@ -1,0 +1,17 @@
+---
+import { HomeIcon, LibraryIcon, SearchIcon } from "@/components/Icons";
+
+const iconsClasses = "w-6 h-6 text-white/60 hover:text-white/100 transition-all"
+---
+
+<nav class="flex flex-col p-3 gap-6">
+  <a href="/">
+    <HomeIcon className={iconsClasses} />
+  </a>
+  <a href="/">
+    <SearchIcon className={iconsClasses} />
+  </a>
+  <a href="/">
+    <LibraryIcon className={iconsClasses} />
+  </a>
+</nav>
