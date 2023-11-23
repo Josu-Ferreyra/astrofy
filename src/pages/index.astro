@@ -1,39 +1,47 @@
 ---
-import Layout from '@/layouts/Layout.astro';
+import Layout from '@/layouts/Layout.astro'
 import { playlists } from '@/data'
+import { PlayIcon } from '@/components/Icons'
 
 const currentHour = new Date().getHours()
 const greetingMessage = currentHour < 12 ? '¡Buenos días!' : '¡Buenas noches!'
 ---
 
-<Layout title="Spotify Clone 🎧">
-	<div class="p-6">
-		<h1 class="text-3xl font-bold">{greetingMessage}</h1>
+<Layout title='Spotify Clone 🎧'>
+  <div class='p-6'>
+    <h1 class='text-3xl font-bold'>{greetingMessage}</h1>
 
-		<div class="flex gap-4 my-6">
-			{
-				playlists.map(playlist => (
-					<a href={`/${playlist.name}`} class="p-4 bg-zinc-800/30 hover:bg-zinc-800/80 rounded-lg w-[176px] flex flex-col items-center">
-						<picture>
-							<img
-								class="w-36 h-36 object-contain rounded-lg mb-4 transition-all duration-300"
-								src={`./src/music/${playlist.name}/cover.jpeg`}
-								alt="Cover"
-								transition:name={`${playlist.name}-cover`}
-							>
-						</picture>
+    <div class='flex gap-4 my-6'>
+      {
+        playlists.map(playlist => (
+          <article class='relative group'>
+            
+            <button class='absolute bottom-20 right-0 mx-5 z-10 bg-green-500 p-3 rounded-full opacity-0 group-hover:opacity-100 group-hover:-translate-y-4 transition-all duration-300'>
+              <PlayIcon className='h-6 w-6 text-black' />
+            </button>
 
-						<div class="">
-							<h2 class="mb-1">{playlist.name.toUpperCase()}</h2>
-							<p class="text-xs line-clamp-2 text-white/50 font-light">
-								{
-									playlist.tracks.map(track => track.author).join(', ')
-								}
-							</p>
-						</div>
-					</a>
-				))
-			}
-		</div>
-	</div>
+            <a href={`/${playlist.name}`} class='p-4 bg-zinc-800/30 hover:bg-zinc-800/80 rounded-lg w-[176px] flex flex-col items-center'>
+              <picture>
+                <img
+                  class='w-36 h-36 object-contain rounded-lg mb-4 transition-all duration-300'
+                  src={`./src/music/${playlist.name}/cover.jpeg`}
+                  alt='Cover'
+                  transition:name={`${playlist.name}-cover`}
+                />
+              </picture>
+
+              <div class=''>
+                <h2 class='mb-1'>{playlist.name.toUpperCase()}</h2>
+                <p class='text-xs line-clamp-2 text-white/50 font-light'>
+                  {
+                    playlist.tracks.map(track => track.author).join(', ')
+                  }
+                </p>
+              </div>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </div>
 </Layout>
