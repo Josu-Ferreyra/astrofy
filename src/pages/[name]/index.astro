@@ -1,0 +1,30 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import { playlists } from '@/data'
+
+
+const { name } = Astro.params
+const [ playlist ] = playlists.filter(playlist => playlist.name === name)
+const artists = [...new Set(playlist.tracks.map(track => track.author))]
+---
+
+<Layout title='Spotify Clone''>
+  <div class={`p-6 h-full bg-gradient-to-t from-zinc-900 from-40% to-sky-800`}>
+    <div class="flex gap-6">
+      <picture>
+        <img
+          class="w-[232px] aspect-square object-cover shadow-lg transition-all duration-300"
+          src={`./src/music/${playlist.name}/cover.jpeg`}
+          transition:name={`${playlist.name}-cover`}
+          alt="Cover"
+        >
+      </picture>
+      <div class="flex flex-col justify-end">
+        <span class="text-xs text-white/60">Lista</span>
+        <h1 class="text-8xl font-black capitalize mt-2 mb-3">{playlist.name}</h1>
+        <p class="text-sm text-white/60">Con {artists.slice(0, 3).join(', ')} y más</p>
+        <p class="text-sm text-white/60">{playlist.tracks.length} canciones</p>
+      </div>
+    </div>
+  </div>
+</Layout>
